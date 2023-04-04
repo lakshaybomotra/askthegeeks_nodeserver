@@ -723,6 +723,6 @@ const giveCurrentDateTime = () => {
 }
 
 app.listen(3000, function () {
-  console.log(`Server Running on http://localhost:${port}`);
+  console.log(`Server Running`);
   // console.log('Server Running on Port ' + port);
 });
