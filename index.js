@@ -108,7 +108,7 @@ app.post("/add-ad", upload.single("file"), async (req, res) => {
       const downloadURL = await getDownloadURL(snapshot.ref);
 
       console.log('File successfully uploaded.');
-      const adurl = "req.body.adurl";
+      const adurl = req.body.adurl;
       let sql = "UPDATE `advertisement` SET `sr`='1',`ad_image`='"+ downloadURL +"',`ad_url`='"+ adurl +"' WHERE 1";
       // let sql = "UPDATE `advertisement` SET `sr`='1',`ad_url`='" + adurl + "`,'ad_image`='" + downloadURL + "' WHERE 1";
       conn.query(sql, (err, result) => {
